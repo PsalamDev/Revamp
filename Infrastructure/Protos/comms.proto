@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option csharp_namespace = "CommunicationGrpc";
+
+package comms;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc SendMessageByTemplate (SendMessageViaTemplateRequest) returns (SendMessageViaTemplateResponse); 
+  rpc SendGeneralMessage (SendGeneralMessageRequest) returns (SendGeneralMessageResponse);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message SendMessageViaTemplateRequest {
+  
+  string TemplateId = 1;
+  string UserId = 2;
+  string Emails =3;
+  
+}
+
+message SendMessageViaTemplateResponse {
+  
+  string response = 1;
+  
+}
+
+message SendGeneralMessageRequest {
+  
+  string CompanyId = 1;
+  string Subject = 2;
+  string Body = 3;
+  string Emails = 4;
+}
+
+message SendGeneralMessageResponse {
+
+  string response = 1;
+
+}

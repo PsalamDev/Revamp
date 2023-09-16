@@ -1,0 +1,6 @@
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\Service\obj\Debug\net6.0\Service.csproj.AssemblyReference.cache
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\Service\obj\Debug\net6.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\Service\obj\Debug\net6.0\Service.AssemblyInfoInputs.cache
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\Service\obj\Debug\net6.0\Service.AssemblyInfo.cs
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\Service\obj\Debug\net6.0\Service.csproj.CoreCompileInputs.cache
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\Service\obj\Debug\net6.0\Service.MvcApplicationPartsAssemblyInfo.cache

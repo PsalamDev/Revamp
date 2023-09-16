@@ -1,0 +1,176 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "EmployeeGrpc";
+
+package greet;
+
+// The greeting service definition.
+service EmployeeGrpcService {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc GetSupervisorEmployee (EmployeeUnderSupervisorRequest) returns (EmployeeUnderSupervisorReply);
+  rpc GetEmployeeDetails (EmployeeDetailsRequest) returns (EmployeeDetailsReponse);
+  rpc GetAllLevels (EmployeeLevelsRequest) returns (EmployeeLevelReply);
+  rpc NewGetEmployeeDetails (EmployeeDetailsRequest) returns (EmployeeDetailsReponse);
+  rpc GetEmployeeDetailsByNo (EmployeeDetailsByNoRequest) returns (EmployeeUserDetailsReponse);
+  rpc GetEmployeeDetailsByUser (EmployeeDetailsRequestByUserId) returns (EmployeeUserDetailsReponse);
+  rpc GetEmployeeDefaultContract (EmployeeDefaultContractRequest) returns (EmployeeDefaultContractResponse);
+  rpc GetEmployeeDefaultContractByUser (EmployeeContractDetailsRequestByUserId) returns (EmployeeDefaultContractResponse);
+  rpc GetEmployeesByCompany (EmployeeListByCompanyId) returns (EmployeeByCompanyReply);
+  rpc OnboardEmployeeViaRecruitment (OnboardViaRecruitmentRequest) returns (OnboardViaRecruitmentResponse);
+  
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message EmployeeUnderSupervisorRequest {
+    string SupervisorId = 1;
+}
+
+message EmployeeUnderSupervisorReply {
+repeated EmployeeManagerList empList = 1;
+}
+
+message EmployeeManagerList {
+    string EmployeeId = 1;
+    string EmployeeName = 2;
+}
+
+message EmployeeDetailsRequest {
+    string EmployeeId = 1;
+}
+
+message EmployeeDetailsByNoRequest {
+  string EmployeeNumber = 1;
+}
+
+message EmployeeDetailsRequestByUserId {
+  string UserId = 1;
+}
+
+message EmployeeListByCompanyId {
+  string CompanyId = 1;
+}
+message EmployeeContractDetailsRequestByUserId {
+  string UserId = 1;
+}
+
+message EmployeeUserDetailsReponse {
+    string FullName = 1;
+    string Phonenumber = 2;
+    string Email = 3;
+    string ProfileImage = 4;
+    string EmployeeId = 5;
+}
+
+message EmployeeDetailsByCompanyResponse {
+  
+  string FullName = 1;
+  string PhoneNumber = 2;
+  string PersonalEmail = 3;
+  string ProfileImage = 4;
+  string EmployeeId = 5;
+  string DateOfBirth = 6;
+  string EmployeeNumber = 7;
+  string ResumptionDate = 8;
+  string Gender = 9;
+  string UserId = 10;
+  
+}
+
+message OnboardViaRecruitmentRequest {
+  
+  string CompanyId = 1;
+  string FirstName = 2;
+  string LastName = 3;
+  string MiddleName = 4;
+  string PhoneNumber = 5;
+  string DateOfBirth = 6;
+  string EmailAddress = 7;
+  string Gender = 8;
+  string MaritalStatus = 9;
+  string PersonalEmail = 10;
+  string ReligionId = 11;
+  string FieldOfStudy = 12;
+  string Degree = 13;
+  string DateOfCompletion = 14;
+  string CGPA = 15;
+  string InstitutionId = 16;
+  string NextOfKinName = 17;
+  string NextOfKinRelationship =18;
+  string NextOfKinPhoneNumber = 19;
+  string NextOfKinAddress = 20;
+  string Address = 21;
+  string State = 22;
+  string Country = 23;
+  string JobTitleId = 24;
+  string JobTitleName = 25;
+  google.protobuf.Timestamp HiredDate = 26;
+  string SalaryPerAnnum = 27;
+  string Designation = 28;
+  string EmployeeType = 29;
+  string DepartmentId = 30;
+  string DepartmentName = 31;
+  string ReportingManager = 32;
+  string ReportingManagerId = 33;
+  string CompanyLocationId = 34;
+  string CompanyLocationName = 35;
+  string OfferLetterExpiration = 36;
+}
+
+message OnboardViaRecruitmentResponse{
+  
+  string Id = 1;
+  string IsOfferSent = 2;
+  string IsSuccessful = 3;
+  
+}
+
+
+
+message EmployeeByCompanyReply {
+  repeated EmployeeDetailsByCompanyResponse empProList = 1;
+}
+
+message EmployeeDetailsReponse {
+  string FullName = 1;
+  string Phonenumber = 2;
+  string Email = 3;
+}
+
+message EmployeeDefaultContractRequest
+{
+  string EmployeeId = 1;
+}
+
+message EmployeeDefaultContractResponse
+{
+  string Id = 1;
+  string DepartmentId = 2;
+  string SupervisorId = 3;
+  string SupervisorName = 4;
+  string LevelId = 5;
+}
+
+message EmployeeLevelsRequest {
+     string CompanyId = 1;
+ }
+ 
+ 
+ message EmployeeLevelReply {
+ repeated EmployeeLevelsResponse empLevelList = 1;
+ }
+ 
+ message EmployeeLevelsResponse {
+     string LevelName = 1;
+     int32 LevelIndex = 2;
+     string Id = 3;
+ }

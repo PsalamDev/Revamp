@@ -1,0 +1,12 @@
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\bin\Debug\net6.0\HRShared.deps.json
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\bin\Debug\net6.0\HRShared.dll
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\bin\Debug\net6.0\HRShared.pdb
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.csproj.AssemblyReference.cache
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.AssemblyInfoInputs.cache
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.AssemblyInfo.cs
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.csproj.CoreCompileInputs.cache
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.dll
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\refint\HRShared.dll
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\HRShared.pdb
+C:\Users\Abdul-Salam\Documents\Projects\Revamp\HRShared\obj\Debug\net6.0\ref\HRShared.dll

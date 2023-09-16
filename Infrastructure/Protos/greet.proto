@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+option csharp_namespace = "RecruitmentGRPCService";
+
+package greet;
+
+// The greeting service definition.
+service Companyy {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc GetCompanyDetails(CompanyyRequest) returns (CompanyyResponse);
+  rpc RegisterNewUser(RegisterUserCommand) returns (UserCreationResponse);
+  rpc RegisterApplicant(RegisterUserCommand) returns (UserCreationResponse);
+  rpc GetAllDepartment(GetDepartmentsRequest) returns (DepartmentListResponse);
+}
+
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message CompanyyRequest {
+    string companyid = 1;
+}
+
+message RegisterUserCommand {
+    string firstname = 1;
+    string lastname = 2;
+    string email = 3;
+    string username = 4;
+    string password = 5;
+    string confirmpassword = 6;
+    string phonenumber = 7;
+    string companyid = 8;
+}
+
+message UserCreationResponse {
+    string response = 1;
+    string message = 2;
+}
+
+message CompanyyResponse {
+    string companyname = 1;
+}
+
+message GetDepartmentsRequest {
+    string companyId = 1;
+}
+
+message DepartmentListResponse {
+repeated DepartmentModelResponse deptList = 1;
+}
+
+message DepartmentModelResponse {
+
+    string Id = 1;
+    string Name = 2;
+    string Code = 3;
+    string HeadOfDepartment = 4;
+    string HODName  = 5;
+
+}
+
+message SendMessageViaTemplateResponse {
+  
+  string response = 1;
+  
+}
